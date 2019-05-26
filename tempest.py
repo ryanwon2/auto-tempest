@@ -6,7 +6,7 @@ class AutoTempest:
 		self.ongoing = False
 
 	def start(self): 
-		pos = imagesearch("stage.png")
+		pos = imagesearch("images/stage.png")
 		if pos[0] != -1:
 			print("STAGE FOUND")
 			pyautogui.click(pos[0], pos[1])
@@ -16,7 +16,7 @@ class AutoTempest:
 			self.ongoing = True
 
 	def check_restore(self): 
-		pos = imagesearch("restore.png")
+		pos = imagesearch("images/restore.png")
 		if pos[0] != -1:
 			print("RESTORE FOUND")
 			pyautogui.click(pos[0], pos[1])
@@ -24,25 +24,25 @@ class AutoTempest:
 			self.close()
 
 	def auto(self):
-		pos = imagesearch("auto.png")
+		pos = imagesearch("images/auto.png")
 		if pos[0] != -1:
 			print("AUTO FOUND")
 			pyautogui.click(pos[0], pos[1])
 			time.sleep(1)
-			pos = imagesearch("autoconfirm.png")
+			pos = imagesearch("images/autoconfirm.png")
 			if pos[0] != -1:
 				pyautogui.click(pos[0], pos[1])
 				time.sleep(1)
 
 	def fight_large(self):
-		pos = imagesearch("fightlarge.png")
+		pos = imagesearch("images/fightlarge.png")
 		if pos[0] != -1:
 			print("FIGHT LARGE FOUND")
 			pyautogui.click(pos[0], pos[1])
 			time.sleep(1)
 
 	def fight_small(self):
-		pos = imagesearch("fightsmall.png")
+		pos = imagesearch("images/fightsmall.png")
 		if pos[0] != -1:
 			print("FIGHT SMALL FOUND")
 			pyautogui.click(pos[0], pos[1])
@@ -50,14 +50,14 @@ class AutoTempest:
 			self.fight_large()
 
 	def ok(self): 
-		pos = imagesearch("ok.png")
+		pos = imagesearch("images/ok.png")
 		if pos[0] != -1:
 			print("OK FOUND")
 			pyautogui.click(pos[0], pos[1])
 			self.ongoing = False
 
 	def close(self): 
-		pos = imagesearch("close.png")
+		pos = imagesearch("images/close.png")
 		if pos[0] != -1:
 			print("CLOSE FOUND")
 			pyautogui.click(pos[0], pos[1])
