@@ -54,7 +54,6 @@ class AutoTempest:
 		if pos[0] != -1:
 			print("OK FOUND")
 			pyautogui.click(pos[0], pos[1])
-			self.ongoing = False
 
 	def close(self): 
 		pos = imagesearch("images/close.png")
@@ -62,6 +61,7 @@ class AutoTempest:
 			print("CLOSE FOUND")
 			pyautogui.click(pos[0], pos[1])
 			time.sleep(1)
+			self.start()
 
 	def main(self):
 		try:
